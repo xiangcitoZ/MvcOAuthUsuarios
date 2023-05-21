@@ -33,8 +33,8 @@ namespace MvcOAuthUsuarios.Controllers
                 HttpContext.Session.GetString("TOKEN");
             Usuario usuario = await
                 this.service.GetPerfilUsuarioAsync(token);
-            //BlobModel blobPerfil = await this.serviceblob.FindBlobPerfil("imagenesrestaurante", usuario.Imagen , usuario.Nombre);
-            //ViewData["IMAGEN_PERFIL"]= blobPerfil;
+            BlobModel blobPerfil = await this.serviceblob.FindBlobPerfil("imagenesrestaurante", usuario.Imagen , usuario.Nombre);
+            ViewData["IMAGEN_PERFIL"]= blobPerfil;
             return View(usuario);
         }
 

@@ -75,7 +75,7 @@ namespace MvcOAuthUsuarios.Services
         public async Task<Usuario> GetPerfilUsuarioAsync
            (string token)
         {
-            string request = "/api/usuarios/perfilusuario";
+            string request = "/api/perfil/perfilusuario";
             Usuario usuario = await
                 this.CallApiAsync<Usuario>(request, token);
             return usuario;
