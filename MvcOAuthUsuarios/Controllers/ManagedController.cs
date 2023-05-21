@@ -73,7 +73,7 @@ namespace MvcOAuthUsuarios.Controllers
             using (Stream stream = file.OpenReadStream())
             {
                 await this.serviceblobs.UploadBlobAsync
-                ("imagenesperfil", blobName, stream);
+                ("imagenesrestaurante", blobName, stream);
 
             }
 
